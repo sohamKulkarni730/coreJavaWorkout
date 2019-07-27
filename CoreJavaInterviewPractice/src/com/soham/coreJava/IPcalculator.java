@@ -1,6 +1,16 @@
+
+
+
+
 package com.soham.coreJava;
 import java.util.ArrayList;
 
+/**
+ * @author Soham Kulkarni
+ * 
+ * 
+ *
+ */
 public class IPcalculator
 
 {
@@ -33,8 +43,7 @@ public class IPcalculator
 		}
 
 	System.out.println(results);
-
-    }
+      }
 
     public boolean isvalidIP(String possibleIP) {
 	boolean result = true;
