@@ -18,6 +18,9 @@ public class IPcalculator
 	new IPcalculator().IPfinder("21344");
 
     }*/
+    
+    
+   
 
     public void IPfinder(String input) {
 	/*

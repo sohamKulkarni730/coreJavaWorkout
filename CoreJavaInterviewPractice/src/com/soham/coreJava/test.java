@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.lang.reflect.Array;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
@@ -21,8 +22,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Random;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 
 
@@ -103,11 +106,11 @@ class test
 	     tempMap.put(t.getKey(), t.getValue());
 	  }
 	  
-	   tempMap.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(x->System.out.println(x.toString()));
-	   
+	   tempMap.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(x-> x.toString().split("="));
 	  String temp = "Oh my god y are so sweet " ;
 	  ArrayList <String> tempList =  new ArrayList();
 	  Arrays.stream(temp.split(" ")).forEach(x-> System.out.println(x));
+	  
 	  
       }
 	   
@@ -120,9 +123,18 @@ class test
     // Driver program  
     public static void main(String[] args)  throws Exception
     { 
-	test duplicate = new test();
+	/*test duplicate = new test();
 	
-	duplicate.sorttheMap();
+	 duplicate.sorttheMap();
+	
+         ArrayBlockingQueue<String> queue = new  ArrayBlockingQueue<>(20);
+         */
+         int a =3;
+         int b = a;
+         
+         b++;
+         System.out.println(a + " " +b);
+         
 	
         /* 
         duplicate.randomNumberGenerator ();*/
